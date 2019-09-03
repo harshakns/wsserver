@@ -3,7 +3,7 @@ const { createQuote, symbols } = require("./quotes.js");
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const { watchListArr } = require("./sampleData.js");
+const { watchListArr, tradeIdeas } = require("./sampleData.js");
 console.log(watchListArr);
 const watchlists = {
   watchlists: {
@@ -15,10 +15,13 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+//get the list of watchlists
 app.get("/watchlists", (req, res) => {
   res.send(JSON.stringify(watchlists)).status(200);
 });
 
+//adds symbol to watchlist
 app.post("/addsymbol", (req, res) => {
   const watchlist_names = watchlists.watchlists.watchlist.map(
     element => element.watchlist_name
@@ -43,6 +46,8 @@ app.post("/addsymbol", (req, res) => {
   //console.log(watchlists.watchlists.watchlist);
   res.send({ result: "success" }).status(200);
 });
+
+//deletes symbol from watchlist
 app.post("/deletesymbol", (req, res) => {
   console.log(req.body);
   watchlists.watchlists.watchlist = watchlists.watchlists.watchlist.reduce(
@@ -60,6 +65,8 @@ app.post("/deletesymbol", (req, res) => {
   console.log(watchlists.watchlists.watchlist);
   res.send({ result: "success" }).status(200);
 });
+
+//deletes watchlist
 app.post("/deletewatchlist", (req, res) => {
   console.log(watchlists.watchlists.watchlist);
   watchlists.watchlists.watchlist = watchlists.watchlists.watchlist.filter(
@@ -71,10 +78,36 @@ app.post("/deletewatchlist", (req, res) => {
   res.send({ result: "success" }).status(200);
 });
 
+//get the list of tradeIdeas
+app.get("/tradeideas", (req, res) => {
+  res.send({ tradeIdeas }).status(200);
+});
+
+//add the tradeidea
+app.post("/addtradeidea", (req, res) => {
+  console.log(req.body);
+  res.send({ result: "success" }).status(200);
+});
+
+//remove the tradeidea
+
+app.post("/removetradeidea", (req, res) => {
+  console.log(req.body);
+  res.send({ result: "success" }).status(200);
+});
+
+//update the tradeidea
+app.post("/updatetradeidea", (req, res) => {
+  console.log(req.body);
+  res.send({ result: "success" }).status(200);
+});
+
+//starting the server
 app.listen(3001, () => {
   console.log("i am running on port 3001");
 });
 
+//starting the ws server
 const server = new ws.Server({ port: 8080 });
 server.on("connection", ws => {
   setInterval(() => {
@@ -82,5 +115,5 @@ server.on("connection", ws => {
       ws.send(JSON.stringify(createQuote(symbol)));
       return symbol;
     });
-  }, 50);
+  }, 10);
 });

@@ -32,104 +32,92 @@ const watchListArr = [
 
 const tradeIdeas = [
   {
-    symbol: ["AMZN"],
+    symbol: ["SPY"],
     isLong: true,
-
+    isShort: false,
     strategies: ["S1", "S3", "S5"]
   },
   {
-    symbol: ["NVDA"],
+    symbol: ["QQQ"],
     isLong: true,
     isShort: false,
     strategies: ["S1"]
   },
   {
-    symbol: ["BA"],
+    symbol: ["VXX"],
     isLong: true,
     isShort: false,
     strategies: ["S4"]
   },
   {
-    symbol: ["GOOG"],
+    symbol: ["IWM"],
     isLong: true,
     isShort: false,
     strategies: ["S1", "S5"]
   },
   {
-    symbol: ["TSLA"],
+    symbol: ["CVS"],
     isLong: true,
     isShort: false,
     strategies: ["S1", "S5"]
   },
   {
-    symbol: ["AAPL"],
-    isLong: true,
-    isShort: false,
-    strategies: ["S2", "S4"]
-  },
-  {
-    symbol: ["AGN"],
+    symbol: ["CVX"],
     isLong: true,
     isShort: false,
     strategies: ["S3", "S1"]
   },
   {
-    symbol: ["AXP"],
+    symbol: ["CL"],
     isLong: true,
     isShort: false,
     strategies: ["S1", "S2"]
   },
   {
-    symbol: ["BIIB"],
+    symbol: ["DD"],
     isLong: true,
     isShort: false,
     strategies: ["S3", "S4"]
   },
   {
-    symbol: ["BMY"],
+    symbol: ["DHR"],
     isLong: true,
     isShort: false,
     strategies: ["S1", "S5"]
-  },
-  {
-    symbol: ["CAT"],
-    isLong: true,
-    isShort: false,
-    strategies: ["S4", "S5"]
-  },
-  {
-    symbol: ["COF"],
-    isLong: true,
-    isShort: false,
-    strategies: ["S1", "S5", "S6"]
   },
   {
     symbol: ["DOW"],
     isLong: true,
     isShort: false,
+    strategies: ["S4", "S5"]
+  },
+  {
+    symbol: ["DUK"],
+    isLong: true,
+    isShort: false,
+    strategies: ["S1", "S5", "S6"]
+  },
+  {
+    symbol: ["DIS"],
+    isLong: true,
+    isShort: false,
     strategies: ["S1", "S5"]
   },
-  { symbol: ["ADL"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["ANTO"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["AHT"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["ABF"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["AZN"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["AVV"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["BARC"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["BDEV"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["BKG"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["BHP"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["BATS"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["BLND"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["BNZL"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["BRBY"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["CCL"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["CNA"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["CCH"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["CPG"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["CRDA"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["DCC"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
-  { symbol: ["DGE"], isLong: true, isShort: false, strategies: ["S1", "S5"] }
+  { symbol: ["EXC"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["FB"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["FDX"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["GD"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["GM"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["IBM"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["INTC"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["JNJ"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["JPM"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["KHC"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["MDLZ"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["MDT"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["MO"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["MSFT"], isLong: true, isShort: false, strategies: ["S1", "S5"] },
+  { symbol: ["NFLX"], isLong: true, isShort: false, strategies: ["S1", "S5"] }
 ];
 
 const accountInformation = {
@@ -390,5 +378,6 @@ const optionData = [
 ];
 
 module.exports = {
-  watchListArr
+  watchListArr,
+  tradeIdeas
 };
