@@ -377,7 +377,349 @@ const optionData = [
   }
 ];
 
+const orders = [
+  {
+    id: 228175,
+    type: "limit",
+    symbol: "AAPL",
+    side: "buy",
+    quantity: 50.0,
+    status: "expired",
+    duration: "pre",
+    price: 22.0,
+    avg_fill_price: 0.0,
+    exec_quantity: 0.0,
+    last_fill_price: 0.0,
+    last_fill_quantity: 0.0,
+    remaining_quantity: 0.0,
+    create_date: "2018-06-01T12:02:29.682Z",
+    transaction_date: "2018-06-01T12:30:02.385Z",
+    class: "equity"
+  },
+  {
+    id: 228749,
+    type: "market",
+    symbol: "SPY",
+    side: "buy_to_open",
+    quantity: 1.0,
+    status: "expired",
+    duration: "pre",
+    avg_fill_price: 0.0,
+    exec_quantity: 0.0,
+    last_fill_price: 0.0,
+    last_fill_quantity: 0.0,
+    remaining_quantity: 0.0,
+    create_date: "2018-06-06T20:16:17.342Z",
+    transaction_date: "2018-06-06T20:16:17.357Z",
+    class: "option",
+    option_symbol: "SPY180720C00274000"
+  },
+  {
+    id: 229063,
+    type: "debit",
+    symbol: "SPY",
+    side: "buy",
+    quantity: 1.0,
+    status: "canceled",
+    duration: "pre",
+    price: 42.0,
+    avg_fill_price: 0.0,
+    exec_quantity: 0.0,
+    last_fill_price: 0.0,
+    last_fill_quantity: 0.0,
+    remaining_quantity: 0.0,
+    create_date: "2018-06-12T21:13:36.076Z",
+    transaction_date: "2018-06-12T21:18:41.604Z",
+    class: "combo",
+    num_legs: 2,
+    strategy: "covered call",
+    leg: [
+      {
+        id: 229064,
+        type: "debit",
+        symbol: "SPY",
+        side: "buy",
+        quantity: 100.0,
+        status: "canceled",
+        duration: "pre",
+        price: 42.0,
+        avg_fill_price: 0.0,
+        exec_quantity: 0.0,
+        last_fill_price: 0.0,
+        last_fill_quantity: 0.0,
+        remaining_quantity: 0.0,
+        create_date: "2018-06-12T21:13:36.076Z",
+        transaction_date: "2018-06-12T21:18:41.587Z",
+        class: "equity"
+      },
+      {
+        id: 229065,
+        type: "debit",
+        symbol: "SPY",
+        side: "sell_to_close",
+        quantity: 1.0,
+        status: "canceled",
+        duration: "pre",
+        price: 42.0,
+        avg_fill_price: 0.0,
+        exec_quantity: 0.0,
+        last_fill_price: 0.0,
+        last_fill_quantity: 0.0,
+        remaining_quantity: 0.0,
+        create_date: "2018-06-12T21:13:36.076Z",
+        transaction_date: "2018-06-12T21:18:41.597Z",
+        class: "option",
+        option_symbol: "SPY180720C00274000"
+      }
+    ]
+  },
+  {
+    id: 229123,
+    type: "credit",
+    symbol: "SPY",
+    side: "buy",
+    quantity: 1.0,
+    status: "expired",
+    duration: "pre",
+    price: 0.8,
+    avg_fill_price: 0.0,
+    exec_quantity: 0.0,
+    last_fill_price: 0.0,
+    last_fill_quantity: 0.0,
+    remaining_quantity: 0.0,
+    create_date: "2018-06-13T16:54:39.812Z",
+    transaction_date: "2018-06-13T20:55:00.069Z",
+    class: "multileg",
+    num_legs: 4,
+    strategy: "condor",
+    leg: [
+      {
+        id: 229124,
+        type: "credit",
+        symbol: "SPY",
+        side: "buy_to_open",
+        quantity: 1.0,
+        status: "expired",
+        duration: "pre",
+        price: 0.8,
+        avg_fill_price: 0.0,
+        exec_quantity: 0.0,
+        last_fill_price: 0.0,
+        last_fill_quantity: 0.0,
+        remaining_quantity: 0.0,
+        create_date: "2018-06-13T16:54:39.812Z",
+        transaction_date: "2018-06-13T20:55:00.069Z",
+        class: "option",
+        option_symbol: "SPY180720C00274000"
+      },
+      {
+        id: 229125,
+        type: "credit",
+        symbol: "SPY",
+        side: "sell_to_open",
+        quantity: 1.0,
+        status: "expired",
+        duration: "pre",
+        price: 0.8,
+        avg_fill_price: 0.0,
+        exec_quantity: 0.0,
+        last_fill_price: 0.0,
+        last_fill_quantity: 0.0,
+        remaining_quantity: 0.0,
+        create_date: "2018-06-13T16:54:39.812Z",
+        transaction_date: "2018-06-13T20:55:00.069Z",
+        class: "option",
+        option_symbol: "SPY180720C00275000"
+      },
+      {
+        id: 229126,
+        type: "credit",
+        symbol: "SPY",
+        side: "sell_to_open",
+        quantity: 1.0,
+        status: "expired",
+        duration: "pre",
+        price: 0.8,
+        avg_fill_price: 0.0,
+        exec_quantity: 0.0,
+        last_fill_price: 0.0,
+        last_fill_quantity: 0.0,
+        remaining_quantity: 0.0,
+        create_date: "2018-06-13T16:54:39.812Z",
+        transaction_date: "2018-06-13T20:55:00.069Z",
+        class: "option",
+        option_symbol: "SPY180720C00276000"
+      },
+      {
+        id: 229127,
+        type: "credit",
+        symbol: "SPY",
+        side: "buy_to_open",
+        quantity: 1.0,
+        status: "expired",
+        duration: "pre",
+        price: 0.8,
+        avg_fill_price: 0.0,
+        exec_quantity: 0.0,
+        last_fill_price: 0.0,
+        last_fill_quantity: 0.0,
+        remaining_quantity: 0.0,
+        create_date: "2018-06-13T16:54:39.812Z",
+        transaction_date: "2018-06-13T20:55:00.069Z",
+        class: "option",
+        option_symbol: "SPY180720C00277000"
+      }
+    ]
+  }
+];
+
+const positions = [
+  {
+    cost_basis: 207.01,
+    date_acquired: "2018-08-08T14:41:11.405Z",
+    id: 130089,
+    quantity: 1.0,
+    symbol: "AAPL"
+  },
+  {
+    cost_basis: 1870.7,
+    date_acquired: "2018-08-08T14:42:00.774Z",
+    id: 130090,
+    quantity: 1.0,
+    symbol: "AMZN"
+  },
+  {
+    cost_basis: 50.41,
+    date_acquired: "2019-01-31T17:05:44.674Z",
+    id: 133590,
+    quantity: 1.0,
+    symbol: "CAH"
+  },
+  {
+    cost_basis: 173.04,
+    date_acquired: "2019-03-11T16:51:51.987Z",
+    id: 134134,
+    quantity: 1.0,
+    symbol: "FB"
+  },
+  {
+    cost_basis: 9.87,
+    date_acquired: "2019-03-11T16:50:33.156Z",
+    id: 134132,
+    quantity: 1.0,
+    symbol: "GE"
+  },
+  {
+    cost_basis: 1772.54,
+    date_acquired: "2018-06-05T13:45:12.385Z",
+    id: 129298,
+    quantity: 13.0,
+    symbol: "IBM"
+  },
+  {
+    cost_basis: 338.64,
+    date_acquired: "2019-03-11T16:50:55.774Z",
+    id: 134133,
+    quantity: 3.0,
+    symbol: "MSFT"
+  }
+];
+const trades = [
+  {
+    symbol: "AMZN",
+    action: "BTO",
+    quantity: 15,
+    fillPrice: 1924.11,
+    commission: 4.95,
+    totalCost: 28866.6,
+    executionTime: "2019-07-02T14:54:18Z"
+  },
+  {
+    symbol: "MSFT",
+    action: "BTO",
+    quantity: 15,
+    fillPrice: 1924.11,
+    commission: 4.95,
+    totalCost: 28866.6,
+    executionTime: "2019-07-02T14:54:18Z"
+  },
+  {
+    symbol: "NFLX",
+    action: "BTO",
+    quantity: 15,
+    fillPrice: 1924.11,
+    commission: 4.95,
+    totalCost: 28866.6,
+    executionTime: "2019-07-02T14:54:18Z"
+  },
+  {
+    symbol: "CAT",
+    action: "BTO",
+    quantity: 15,
+    fillPrice: 1924.11,
+    commission: 4.95,
+    totalCost: 28866.6,
+    executionTime: "2019-07-02T14:54:18Z"
+  },
+  {
+    symbol: "GOOG",
+    action: "BTO",
+    quantity: 15,
+    fillPrice: 1924.11,
+    commission: 4.95,
+    totalCost: 28866.6,
+    executionTime: "2019-07-02T14:54:18Z"
+  },
+  {
+    symbol: "TSLA",
+    action: "BTO",
+    quantity: 15,
+    fillPrice: 1924.11,
+    commission: 4.95,
+    totalCost: 28866.6,
+    executionTime: "2019-07-02T14:54:18Z"
+  },
+  {
+    symbol: "AMD",
+    action: "BTO",
+    quantity: 15,
+    fillPrice: 1924.11,
+    commission: 4.95,
+    totalCost: 28866.6,
+    executionTime: "2019-07-02T14:54:18Z"
+  },
+  {
+    symbol: "DOW",
+    action: "BTO",
+    quantity: 15,
+    fillPrice: 1924.11,
+    commission: 4.95,
+    totalCost: 28866.6,
+    executionTime: "2019-07-02T14:54:18Z"
+  },
+  {
+    symbol: "GM",
+    action: "BTO",
+    quantity: 15,
+    fillPrice: 1924.11,
+    commission: 4.95,
+    totalCost: 28866.6,
+    executionTime: "2019-07-02T14:54:18Z"
+  },
+  {
+    symbol: "JPM",
+    action: "BTO",
+    quantity: 15,
+    fillPrice: 1924.11,
+    commission: 4.95,
+    totalCost: 28866.6,
+    executionTime: "2019-07-02T14:54:18Z"
+  }
+];
 module.exports = {
   watchListArr,
-  tradeIdeas
+  tradeIdeas,
+  orders,
+  positions,
+  trades
 };

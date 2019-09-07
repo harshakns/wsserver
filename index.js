@@ -3,7 +3,13 @@ const { createQuote, symbols } = require("./quotes.js");
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const { watchListArr, tradeIdeas } = require("./sampleData.js");
+const {
+  watchListArr,
+  tradeIdeas,
+  positions,
+  orders,
+  trades
+} = require("./sampleData.js");
 console.log(watchListArr);
 const watchlists = {
   watchlists: {
@@ -100,6 +106,19 @@ app.post("/removetradeidea", (req, res) => {
 app.post("/updatetradeidea", (req, res) => {
   console.log(req.body);
   res.send({ result: "success" }).status(200);
+});
+
+//get positions
+app.get("/getpositions", (req, res) => {
+  res.send(positions).status(200);
+});
+//get trades
+app.get("/gettrades", (req, res) => {
+  res.send(trades).status(200);
+});
+//get orders
+app.get("/getorders", (req, res) => {
+  res.send(orders).status(200);
 });
 
 //starting the server
